@@ -1,0 +1,10 @@
+<div>
+    <input type="number" placeholder="Number of points" [(ngModel)]="numPoints">
+</div>
+
+<div *ngIf="numPoints>0">
+    <div *ngFor="let i of getNum()">
+        <input type="number" placeholder="X">
+        <input type="number" placeholder="Y">
+    </div>
+</div>
