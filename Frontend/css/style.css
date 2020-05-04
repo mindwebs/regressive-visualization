@@ -416,7 +416,7 @@ ol {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	text-align: center;
-	background-color: #000;
+	background-color: black;
 }
 
 .hs-item h1 {
@@ -462,28 +462,41 @@ ol {
   5. About section
 ---------------------*/
 
-.about-section {
-	padding-left: 227px;
+.about-two {
 	background-color: #000;
+	margin:0;
 }
-
-.about-content-warp {
-	max-width: 470px;
+.about-two .row:nth-child(1){
+	background-color: #141325;
+	padding:40px;
 }
-
-.about-content-warp h2 {
-	font-size: 48px;
-	font-weight: 500;
-	margin-bottom: 20px;
-}
-
-.about-content-warp p {
+.about-two .section_title span{
+	color:white;
+	font-size: 40px;
 	margin-bottom: 40px;
 }
-
-.about-content-warp.text-white p {
-	opacity: 0.5;
+.about-two .section_title h3{
+	color:gray;
+	font-size: 20px;
+	margin-top:30px;
 }
+.about-two .col-xl-4{
+	display: inline-flex;
+	width: 100vw;
+	
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-top:20px;
+}
+.about-two .single_service{
+	background-color: rgb(168, 168, 168);
+	padding:20px;
+}
+.about-two .single_service:hover{
+	background-color: whitesmoke;
+}
+
 .about-three{
 	background-color: gray;
 }
