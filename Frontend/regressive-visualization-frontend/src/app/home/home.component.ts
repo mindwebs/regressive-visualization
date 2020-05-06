@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  myParams: object = {};
+  myStyle: object = {};
   constructor() { }
 
   ngOnInit() {
+    this.myParams = {
+      particles: {
+        number: {
+          value: 300,
+        }
+      }
+    };
   }
 
 }

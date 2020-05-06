@@ -75,7 +75,7 @@ p {
 }
 
 .banner h1 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .banner h3 {
@@ -84,18 +84,22 @@ p {
 
 .btn {
     padding: 15px;
-    border: 2px solid white;
+    border: 2px solid black;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .started-section {
     width: 100%;
-    background-color: black;
     padding: 40px;
 }
 
 .started-section h1 {
     text-align: center;
-    color: white;
 }
 
 .cards {
@@ -113,6 +117,12 @@ p {
     padding-top: 20px;
     border-radius: 5px;
     background-color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
+    background-color: 	#C8C8C8;
 }
 
 .content {
