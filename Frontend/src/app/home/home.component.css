@@ -1,0 +1,159 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header-section {
+    width: 100%;
+    background-color: rgba(0,0,0,1);
+    padding: 10px;
+    display: flex;
+}
+
+.logo {
+    padding: 10px;
+    width: 200px;
+}
+
+.menus {
+    color: white;
+    display: flex;
+    width: auto;
+    margin: auto;
+}
+
+.menus h3 {
+    padding: 10px;
+}
+
+.socials {
+    color: white;
+    display: flex;
+}
+
+.icon {
+    font-size: 36px;
+    align-self: center;
+    padding: 10px;
+}
+
+.home-section {
+    width: 100%;
+    height: 80vh;
+    background-image: url('../../assets/bg1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.4);
+    background-blend-mode: multiply;
+    background-position: center;
+}
+
+.banner {
+    color: white;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner h1 {
+    margin-bottom: 20px;
+}
+
+.banner h3 {
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 15px;
+    border: 2px solid black;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.started-section {
+    width: 100%;
+    padding: 40px;
+}
+
+.started-section h1 {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.3);
+    background-color: 	#C8C8C8;
+}
+
+.content {
+    padding: 20px;
+}
+
+.image {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+
+.image img {
+    width: 100%;
+}
+
+.upload-section {
+    width: 100%;
+    background-color: rgba(206, 206, 206,0.3);
+    padding: 40px;
+}
+
+.upload-section h1 {
+    text-align: center;
+}
+
+.contact-section {
+    width: 100%;
+    padding: 40px;
+}
+
+.contact-section h1 {
+    text-align: center;
+}
