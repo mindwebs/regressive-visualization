@@ -82,13 +82,13 @@ p {
     margin-bottom: 50px;
 }
 
-.btn {
+.btns {
     padding: 15px;
     border: 2px solid black;
     transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btns:hover {
     background-color: black;
     color: white;
 }

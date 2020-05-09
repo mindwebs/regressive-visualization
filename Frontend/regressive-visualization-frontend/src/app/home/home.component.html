@@ -62,7 +62,7 @@
             </div>
             <div class="content"></div>
             <div class="content">
-                <div class="btn" style="border-color: black; width:50%; margin:auto;"><span
+                <div class="btns" style="border-color: black; width:50%; margin:auto;"><span
                         style="font-family: 'Roboto Mono', monospace; font-size:24px; ">Upload</span></div>
             </div>
         </div>
@@ -74,7 +74,36 @@
             </div>
             <div class="content"></div>
             <div class="content">
-                <div class="btn" style="border-color: black; width:50%; margin:auto;"><span
+                <ng-template #content let-modal>
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modal-basic-title">Input Data Points</h4>
+                        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="points">Number of points</label>
+                                <div class="input-group">
+                                    <input type="number" id="points">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="x">X: </label>
+                                <input type="number" id="x">
+                                <label for="y">Y: </label>
+                                <input type="number" id="y">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark"
+                            (click)="modal.close('Save click')">Save</button>
+                    </div>
+                </ng-template>
+
+                <div class="btns" style="border-color: black; width:50%; margin:auto;" (click)="open(content)"><span
                         style="font-family: 'Roboto Mono', monospace; font-size:24px; ">Input</span></div>
             </div>
         </div>
