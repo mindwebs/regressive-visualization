@@ -1,7 +1,9 @@
 import numpy as np
-import model as ml
+import  model as ml
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 # Debadree send json as { 'x': [coordinates of x], 'y': [...], 'x1': valueSupplied }
 @app.route('/', methods=['POST'])
@@ -12,7 +14,7 @@ def home():
     listY = inp['y']
     xSupplied = inp['x1']
 
-    getY = ml.calc(listX, listY, xSupplied)
+    getY = ml.prediction(listX, listY, xSupplied)
 
     return jsonify({'result' : getY})
 

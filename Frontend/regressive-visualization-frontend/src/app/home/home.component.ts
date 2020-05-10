@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,22 +11,56 @@ export class HomeComponent implements OnInit {
   myParams: object = {};
   myStyle: object = {};
   closeResult = '';
-  
-  constructor(private modalService: NgbModal) { }
+  nPoints: number;
+  x: number[];
+  y: number[];
+  x1: number;
+  @ViewChild('#thinking', { static: true }) thinkModal: TemplateRef<any>;
+  constructor(private modalService: NgbModal, private router: Router) { }
 
   ngOnInit() {
     this.myParams = {
       particles: {
         number: {
-          value: 300,
+          value: 500,
         }
       }
     };
   }
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  createPointsArr() {
+    this.x = Array(this.nPoints);
+    this.y = Array(this.nPoints);
+  }
+
+  updateX(event, i) {
+    this.x[i] = parseInt(event.target.value);
+    console.log(this.x[i]);
+  }
+
+  updateY(event, i) {
+    this.y[i] = parseInt(event.target.value);
+    console.log(this.y[i]);
+  }
+
+  customTrackBy(index: number, obj: any): any {
+    return index;
+  }
+
+  saveData() {
+    console.log(this.x);
+    console.log(this.y);
+    this.router.navigate(['results'], { state: { x: this.x, y: this.y, x1: this.x1 } });
+    this.nPoints = 0;
+    this.x = [];
+    this.y = [];
+  }
+
+  open(content: any) {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+      this.saveData();
       this.closeResult = `Closed with: ${result}`;
+      console.log(this.closeResult);
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
